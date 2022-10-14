@@ -4,7 +4,7 @@ import Chat from "./Chat"
 import { useState } from "react"
 import io from "socket.io-client"
 
-const socket = io.connect("https://whatsappserver-oue4.onrender.com")
+const socket = io.connect("https://whatsappserver-atiq.onrender.com")
 
 
 const App = () => {
