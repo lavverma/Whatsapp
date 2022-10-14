@@ -40,7 +40,7 @@ function Chat({ socket, userName, room }) {
           <div className="card shadow-lg mx-auto border border-dark"
             style={{ width: "500px", backgroundImage: `url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg")` }}>
             <div className='chat-header card-header bg-success' >
-              <p className="text-center h1 text-white" >Chats</p>
+              <p className="text-center h1 text-white" >Live Chats</p>
             </div>
             <div id="scroll" className='chat-message card-body'>
               <div style={{ height: "350px" }}>
