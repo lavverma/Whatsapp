@@ -37,7 +37,8 @@ function Chat({ socket, userName, room }) {
     <div className="Chat">
       <div className=" vh-100 container-fluid" style={{ backgroundImage: `url("https://e7.pngegg.com/pngimages/598/1005/png-transparent-abstract-background-technology-hexagonal-pattern.png")` }}>
         <div class="row d-flex justify-content-center align-items-center h-100" >
-          <div className="card shadow-lg mx-auto border border-dark w-50"
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div className="card shadow-lg mx-auto border border-dark"
             style={{  backgroundImage: `url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg")` }}>
             <div className='chat-header card-header bg-success' >
               <p className="text-center h1 text-white" >Live Chats</p>
@@ -94,6 +95,7 @@ function Chat({ socket, userName, room }) {
             </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
