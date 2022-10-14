@@ -61,7 +61,6 @@ function Chat({ socket, userName, room }) {
                               </div>
                             </div>
                         ) : (
-                          <div className="" >
                             <div class=" d-flex flex-row " >
                               <div className="lh-1">
                                 <div className=" rounded-4 fw-normal m-2 p-2  border border-dark"
@@ -76,7 +75,6 @@ function Chat({ socket, userName, room }) {
                                 </div>
                               </div>
                             </div>
-                          </div>
                         )}
                       </div>
                     )
