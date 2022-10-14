@@ -34,11 +34,11 @@ function Chat({ socket, userName, room }) {
   }, [socket]);
 
   return (
-    <div className="container-fluid">
-      <div className=" Chat vh-100 " style={{ backgroundImage: `url("https://e7.pngegg.com/pngimages/598/1005/png-transparent-abstract-background-technology-hexagonal-pattern.png")` }}>
+    <div className="Chat">
+      <div className=" vh-100 container-fluid" style={{ backgroundImage: `url("https://e7.pngegg.com/pngimages/598/1005/png-transparent-abstract-background-technology-hexagonal-pattern.png")` }}>
         <div class="row d-flex justify-content-center align-items-center h-100" >
-          <div className="card shadow-lg mx-auto border border-dark"
-            style={{ width: "500px", backgroundImage: `url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg")` }}>
+          <div className="card shadow-lg mx-auto border border-dark w-50"
+            style={{  backgroundImage: `url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg")` }}>
             <div className='chat-header card-header bg-success' >
               <p className="text-center h1 text-white" >Live Chats</p>
             </div>
@@ -51,10 +51,11 @@ function Chat({ socket, userName, room }) {
                         {(userName === messageContent.author) ? (
                             <div class=" d-flex flex-row-reverse " >
                               <div className="lh-1">
-                                <div className="rounded-4 fw-normal m-2 p-2 pb-0 border border-dark"
-                                  style={{ backgroundColor: "#DCF8C6" , width: "250px"}}>
-                                  <p className="fw-bold ">
-                                    {messageContent.message}<span className="fw-lighter fst-italic d-flex flex-row-reverse">{messageContent.time}</span>
+                                <div className="rounded-4 fw-normal m-2 p-2 border border-dark "
+                                  style={{ backgroundColor: "#DCF8C6" }}>
+                                  <p >
+                                    <span className="fw-bold ">{messageContent.message}</span>
+                                    <span className="fw-lighter fst-italic d-flex flex-row-reverse">{messageContent.time}</span>
                                   </p>
                                 </div>
                               </div>
@@ -63,13 +64,14 @@ function Chat({ socket, userName, room }) {
                           <div className="" >
                             <div class=" d-flex flex-row " >
                               <div className="lh-1">
-                                <div className=" rounded-4 fw-normal m-2 p-2 pb-0 border border-dark"
-                                  style={{ backgroundColor: "#ECE5DD" , width: "250px"}}>
+                                <div className=" rounded-4 fw-normal m-2 p-2  border border-dark"
+                                  style={{ backgroundColor: "#ECE5DD" }}>
                                   <p className="fw-bold fst-italic text-success">
                                     {messageContent.author}
                                   </p>
-                                  <p className="fw-bold ">
-                                    {messageContent.message}<span className="fw-lighter fst-italic d-flex flex-row-reverse"> {messageContent.time}</span>
+                                  <p >
+                                    <span className="fw-bold ">{messageContent.message}</span>
+                                    <span className="fw-lighter fst-italic d-flex flex-row-reverse">{messageContent.time}</span>
                                   </p>
                                 </div>
                               </div>
@@ -83,13 +85,15 @@ function Chat({ socket, userName, room }) {
               </div>
             </div>
             <div className='chat-footer card-footer'>
+              <div className="row">
               <input type="text"
                 id="input"
                 placeholder='Write your message...'
-                className="rounded-3 me-2 p-2" style={{ width: "390px" }}
+                className="rounded-3 me-2 p-2 col-10" 
                 onChange={(event) => { setCurrMessage(event.target.value) }}
                 onKeyPress={(event) => { event.key === "Enter" && sendMessage() }} />
-              <button onClick={sendMessage} style={{ width: "40px", height: "40px" }}>&#10148;</button>
+              <button onClick={sendMessage} className="col-1">&#10148;</button>
+            </div>
             </div>
           </div>
         </div>
